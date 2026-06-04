@@ -1,0 +1,25 @@
+# GitHub Pages configuration for the Study Flow public legal site.
+#
+# Pages is served from this /docs folder, but this folder also holds internal
+# planning docs. The exclude list below keeps those out of the published site so
+# only docs/legal/*.html is publicly reachable.
+#
+# Published URLs (once Pages is enabled on the default branch, /docs folder):
+#   https://shedulab.github.io/mobileapp_ai_study_app/legal/privacy.html
+#   https://shedulab.github.io/mobileapp_ai_study_app/legal/terms.html
+
+title: Study Flow Legal
+
+# Do not publish internal markdown docs.
+exclude:
+  - "*.md"
+  - "*.markdown"
+  - app-store-connect.md
+  - implementation-plan.md
+  - status.md
+  - sprint-1.md
+  - sprint-1-qa-checklist.md
+  - sprint-2-qa-checklist.md
+  - sprint-3-qa-checklist.md
+  - sprint-4-qa-checklist.md
+  - sprint-5-qa-checklist.md
