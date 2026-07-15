@@ -109,7 +109,8 @@
         The App offers an optional, user-initiated rewarded ad through Google AdMob. The advertising SDK
         is initialized and an ad is requested only after you choose <strong>Watch Ad</strong>. Where
         required, the Google User Messaging Platform ("UMP") privacy form and the iOS App Tracking
-        Transparency ("ATT") prompt are presented before the first ad request.
+        Transparency ("ATT") prompt are presented before the first ad request. An ad is requested only
+        if UMP indicates that ads may be requested.
       </p>
       <p>
         When you request an ad, the Google Mobile Ads SDK, UMP, and participating advertising partners
@@ -121,7 +122,7 @@
       </p>
       <p>
         To verify that an ad was completed and credit the correct account, we send Google an internal
-        Study Flow user identifier and a single-use reward verification token. These values do not
+        Study Flow user identifier and a reward-session verification token. These values do not
         include your email address or display name. Google sends our backend a signed verification
         callback containing transaction, ad-unit, reward, and timestamp information. We store the ad
         session and its status, Google's transaction identifier, points awarded, point balance, and
@@ -227,9 +228,9 @@
         We keep ad-session, reward-transaction, point-ledger, and redemption records while your account
         is active and for as long as reasonably necessary to maintain an accurate balance, prevent
         duplicate or fraudulent rewards, resolve disputes, and comply with legal obligations. When an
-        account deletion request is completed, we delete or de-identify these records from our active
-        systems unless limited retention is required for legal, security, fraud-prevention, accounting,
-        dispute-resolution, or backup purposes.
+        account deletion request is completed, we delete the related ad-session, reward-transaction,
+        point-ledger, and redemption records from our active systems unless limited retention is required
+        for legal, security, fraud-prevention, accounting, dispute-resolution, or backup purposes.
       </p>
       <p>
         Advertising consent and ATT choices remain in effect until you change or reset them, or until the
@@ -281,6 +282,11 @@
         Where UMP presents a choice, you may choose whether to allow personalized advertising. Refusing or
         withdrawing advertising consent does not reduce the number of points awarded for an ad you
         complete, although an ad may not always be available.
+      </p>
+      <p>
+        When UMP indicates that a privacy-options entry point is required, a
+        <strong>Privacy options</strong> control appears in the App's Settings. You can use it to revisit
+        and update the advertising choices managed through UMP.
       </p>
       <p>
         On iOS, you can deny or later change ATT permission in <strong>Settings &rarr; Privacy &amp;
