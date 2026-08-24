@@ -51,14 +51,14 @@
       <header>
         <p class="eyebrow">Study Flow</p>
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: July 15, 2026</p>
+        <p class="updated">Last updated: August 24, 2026</p>
         <p class="nav"><a href="./index.html">Legal home</a> · <a href="./terms.html">Terms of Use</a></p>
       </header>
 
       <p>
         This Privacy Policy explains how Shedulab ("we", "us", or "our") collects, uses, and shares
         information when you use the Study Flow mobile application ("the App"). Study Flow turns your
-        documents, notes, and recordings into study material such as summaries, flashcards, and quizzes.
+        documents, photos, notes, and recordings into study material such as summaries, flashcards, and quizzes.
       </p>
       <p>
         Please read this Policy carefully. Where we rely on consent, including for personalized
@@ -79,8 +79,12 @@
       <h3>Content you provide</h3>
       <p>
         To generate study material, we process the files and content you upload, including PDF and
-        PPTX documents, pasted text, and audio recordings, along with the text extracted from them and
-        the study sets generated from that content.
+        PPTX documents, photos selected from your library, photos you take with the App, pasted text,
+        and audio recordings. This includes text extracted with optical character recognition (OCR),
+        brief descriptions of relevant visual content, and the study sets generated from that content.
+        When you upload several photos as one document, our service normalizes them and combines them
+        into a PDF. Temporary server-side copies of the individual photos are deleted after that PDF is
+        created; this does not delete or change copies stored on your device or in your photo library.
       </p>
 
       <h3>Study activity</h3>
@@ -100,8 +104,8 @@
       <p>
         We may collect basic technical information such as device type, operating system version, app
         version, and diagnostic or crash data to keep the App working reliably. Diagnostic tools may
-        also collect performance data, logs, screenshots, view hierarchy, and masked session replay data
-        when needed to understand and fix crashes or errors.
+        also collect performance data, logs, and masked session replay data when needed to understand
+        and fix crashes or errors. Diagnostic screenshots and native view-hierarchy attachments are disabled.
       </p>
 
       <h3>Optional rewarded ads and reward information</h3>
@@ -174,7 +178,7 @@
         </thead>
         <tbody>
           <tr><td>Supabase</td><td>Account authentication and database storage</td></tr>
-          <tr><td>OpenAI</td><td>Audio transcription and generating summaries, flashcards, quizzes, and answers from your content</td></tr>
+          <tr><td>OpenAI</td><td>Image and scanned-document OCR and visual understanding, audio transcription, and generating summaries, flashcards, quizzes, and answers from your content</td></tr>
           <tr><td>Cloudflare R2 / Amazon S3</td><td>Storage of uploaded files</td></tr>
           <tr><td>RevenueCat</td><td>Managing subscriptions and entitlements</td></tr>
           <tr><td>Apple / Google</td><td>Processing in-app purchases and subscriptions</td></tr>
@@ -183,7 +187,8 @@
         </tbody>
       </table>
       <p>
-        Content sent to OpenAI is used for audio transcription and to generate your study material. We
+        Content sent to OpenAI is used to extract text and relevant visual descriptions from selected
+        photos and scanned document pages, transcribe audio, and generate your study material. We
         do not authorize these providers to use your content for their own independent purposes beyond
         providing their service to us. OpenAI states that API inputs and outputs are not used to train
         OpenAI models by default unless the API customer opts in. OpenAI may generate abuse monitoring
@@ -192,11 +197,11 @@
       </p>
       <p>
         Diagnostic events sent to Sentry may include account identifiers, email address, device and app
-        information, error details, logs, screenshots, view hierarchy, masked session replay data, and,
-        where an error involves AI processing, limited prompt, extracted content, or generated-output
-        context needed to investigate and fix the issue. We use this information only to operate,
-        secure, and troubleshoot the App. We may also disclose information if required by law or to
-        protect our rights and users.
+        information, error details, logs, and masked session replay data. We do not attach diagnostic
+        screenshots or native view hierarchies to these events.
+        Uploaded photos, image data, OCR text, and AI prompts are excluded from our diagnostic logs and
+        Sentry events. We use diagnostic information only to operate, secure, and troubleshoot the App.
+        We may also disclose information if required by law or to protect our rights and users.
       </p>
       <p>
         Google may process ad-related information and make it available to advertisers or participating
@@ -223,6 +228,11 @@
         systems, subject to limited retention required for legal, security, or backup purposes. Note that
         an active subscription is billed by Apple or Google and must be cancelled separately through your
         store account.
+      </p>
+      <p>
+        Individual server-side photo uploads used to assemble a scanned document are temporary and are
+        deleted after the combined PDF is created. The combined PDF follows the same source-file
+        retention and deletion rules as other uploaded documents.
       </p>
       <p>
         We keep ad-session, reward-transaction, point-ledger, and redemption records while your account
