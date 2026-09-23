@@ -108,13 +108,15 @@
         and fix crashes or errors. Diagnostic screenshots and native view-hierarchy attachments are disabled.
       </p>
 
-      <h3>Optional rewarded ads and reward information</h3>
+      <h3>Ads in the Free version and optional reward information</h3>
       <p>
-        The App offers an optional, user-initiated rewarded ad through Google AdMob. The advertising SDK
-        is initialized and an ad is requested only after you choose <strong>Watch Ad</strong>. Where
-        required, the Google User Messaging Platform ("UMP") privacy form and the iOS App Tracking
-        Transparency ("ATT") prompt are presented before the first ad request. An ad is requested only
-        if UMP indicates that ads may be requested.
+        The Free version may show Google AdMob banner ads on the Home and document screens and
+        full-screen ads at some quiz and flashcard set breaks. These ads are not shown to Premium,
+        trial, or grandfathered subscribers. The App also offers an optional, user-initiated
+        rewarded ad when you choose <strong>Watch Ad</strong>. Before requesting any ad, the App
+        checks Google User Messaging Platform ("UMP") consent status and presents a privacy form
+        where required. The iOS App Tracking Transparency ("ATT") prompt may also be presented.
+        An ad is requested only if UMP indicates that ads may be requested.
       </p>
       <p>
         When you request an ad, the Google Mobile Ads SDK, UMP, and participating advertising partners
@@ -143,7 +145,7 @@
         <li>To create and secure your account and authenticate you.</li>
         <li>To process subscriptions and unlock paid functionality.</li>
         <li>To schedule the local study reminders you have enabled.</li>
-        <li>To request, deliver, personalize where permitted, and measure optional rewarded ads.</li>
+        <li>To request, deliver, personalize where permitted, and measure ads in the Free version and optional rewarded ads.</li>
         <li>To record and respect advertising consent and privacy signals.</li>
         <li>To verify ad completion, award and redeem points, enforce usage limits, and prevent fraud or duplicate rewards.</li>
         <li>To maintain, troubleshoot, and improve the App.</li>
@@ -169,7 +171,7 @@
       <h2>4. Service providers and sharing</h2>
       <p>
         We do not sell your personal information for monetary consideration. We disclose information to
-        service providers and, when you choose to request a rewarded ad, to advertising providers as
+        service providers and, when an ad is requested in the Free version or you choose a rewarded ad, to advertising providers as
         described below:
       </p>
       <table>
@@ -182,7 +184,7 @@
           <tr><td>Cloudflare R2 / Amazon S3</td><td>Storage of uploaded files</td></tr>
           <tr><td>RevenueCat</td><td>Managing subscriptions and entitlements</td></tr>
           <tr><td>Apple / Google</td><td>Processing in-app purchases and subscriptions</td></tr>
-          <tr><td>Google AdMob / Google Mobile Ads SDK / UMP</td><td>Delivering optional rewarded ads; managing consent and privacy signals; ad personalization where permitted; advertising measurement and analytics; fraud prevention; and server-side reward verification</td></tr>
+          <tr><td>Google AdMob / Google Mobile Ads SDK / UMP</td><td>Delivering ads in the Free version and optional rewarded ads; managing consent and privacy signals; ad personalization where permitted; advertising measurement and analytics; fraud prevention; and server-side reward verification</td></tr>
           <tr><td>Sentry</td><td>Crash reporting, diagnostics, performance monitoring, logs, and session replay for troubleshooting</td></tr>
         </tbody>
       </table>
@@ -289,6 +291,8 @@
       <h3>Advertising and tracking choices</h3>
       <p>
         Watching a rewarded ad is optional, and you can use the App's core features without watching one.
+        Free users may see banner and full-screen ads at study breaks; Premium, trial, and
+        grandfathered subscribers do not see these ads.
         Where UMP presents a choice, you may choose whether to allow personalized advertising. Refusing or
         withdrawing advertising consent does not reduce the number of points awarded for an ad you
         complete, although an ad may not always be available.
