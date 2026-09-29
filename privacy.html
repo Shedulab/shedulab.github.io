@@ -51,7 +51,7 @@
       <header>
         <p class="eyebrow">Noti</p>
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: September 27, 2026</p>
+        <p class="updated">Last updated: September 29, 2026</p>
         <p class="nav"><a href="./index.html">Legal home</a> · <a href="./terms.html">Terms of Use</a></p>
       </header>
 
@@ -109,6 +109,22 @@
         and fix crashes or errors. Diagnostic screenshots and native view-hierarchy attachments are disabled.
       </p>
 
+      <h3>Product analytics</h3>
+      <p>
+        We use PostHog to understand how people use Noti and improve features, onboarding,
+        reliability, and subscription screens. We record events such as app sessions, document
+        uploads and processing outcomes, study features opened and completed, paywall views,
+        purchase attempts, verified subscription status, and rewarded-ad credits. These events
+        are linked to your internal account identifier. They may include an opaque document ID,
+        feature or error code, counts or count ranges, processing duration range, subscription
+        product and status, sign-in provider, app version and build, iOS or Android platform,
+        language or locale, and a session identifier. PostHog may infer an approximate country
+        from the IP address of a mobile analytics request. We do not send document or note text,
+        quiz answers, chat messages, recordings, uploaded files, filenames, email addresses,
+        or display names to PostHog. Our existing server-side product-event records continue
+        to be stored in our database for up to 90 days.
+      </p>
+
       <h3>Ads in the Free version and optional reward information</h3>
       <p>
         The Free version may show Google AdMob banner ads on the Home and document screens and
@@ -141,6 +157,7 @@
         calculated on our servers from the study activity described above and do not involve ads or
         advertising partners. We store the milestone, the points awarded, and your point balance to
         operate the rewards feature.
+      </p>
       <p>
         We do not send your uploaded files, pasted text, recordings, generated study material, email
         address, or display name to Google AdMob for ad targeting.
@@ -156,6 +173,7 @@
         <li>To record and respect advertising consent and privacy signals.</li>
         <li>To verify ad completion, award and redeem points, enforce usage limits, and prevent fraud or duplicate rewards.</li>
         <li>To maintain, troubleshoot, and improve the App.</li>
+        <li>To measure product usage, feature adoption, retention, and subscription-screen performance.</li>
         <li>To comply with legal obligations and enforce our Terms of Use.</li>
       </ul>
 
@@ -190,6 +208,7 @@
           <tr><td>OpenAI</td><td>Image and scanned-document OCR and visual understanding, audio transcription, and generating summaries, flashcards, quizzes, and answers from your content</td></tr>
           <tr><td>Cloudflare R2 / Amazon S3</td><td>Storage of uploaded files</td></tr>
           <tr><td>RevenueCat</td><td>Managing subscriptions and entitlements</td></tr>
+          <tr><td>PostHog</td><td>Account-linked product analytics and feature-performance measurement</td></tr>
           <tr><td>Apple / Google</td><td>Processing in-app purchases and subscriptions</td></tr>
           <tr><td>Google AdMob / Google Mobile Ads SDK / UMP</td><td>Delivering ads in the Free version and optional rewarded ads; managing consent and privacy signals; ad personalization where permitted; advertising measurement and analytics; fraud prevention; and server-side reward verification</td></tr>
           <tr><td>Sentry</td><td>Crash reporting, diagnostics, performance monitoring, logs, and session replay for troubleshooting</td></tr>
@@ -229,7 +248,7 @@
         apps that use its services</a>.
       </p>
 
-      <h2>5. Data retention and deletion</h2>
+      <h2 id="account-deletion">5. Data retention and deletion</h2>
       <p>
         We keep your information for as long as your account is active. You can delete your account at
         any time from <strong>Settings &rarr; Delete account</strong> in the App. Deleting your account
@@ -237,6 +256,14 @@
         systems, subject to limited retention required for legal, security, or backup purposes. Note that
         an active subscription is billed by Apple or Google and must be cancelled separately through your
         store account.
+      </p>
+      <p>
+        When your account is deleted, we request deletion of the corresponding PostHog person,
+        product events, and any associated recordings. PostHog processes deletion requests
+        asynchronously. We stop sending new product events for the deleted account from the App;
+        pending deletion requests are retried by our server if a provider is temporarily unavailable.
+        You can also use our <a href="./delete-account.html">account deletion page</a> to request
+        deletion without the App.
       </p>
       <p>
         Individual server-side photo uploads used to assemble a scanned document are temporary and are
